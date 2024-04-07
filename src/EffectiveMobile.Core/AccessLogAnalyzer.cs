@@ -8,23 +8,30 @@ public class AccessLogAnalyzer
 	private readonly ILogProvider _logProvider;
 	private readonly IIPAddressFilter _iPAddressFilter;
 
-	public AccessLogAnalyzer(ILogProvider logProvider, IIPAddressFilter iPAddressFilter)
-    {
+	public AccessLogAnalyzer(
+		ILogProvider logProvider, 
+		IIPAddressFilter iPAddressFilter)
+	{
 		ArgumentNullException.ThrowIfNull(logProvider);
+		ArgumentNullException.ThrowIfNull(iPAddressFilter);
 
 		_logProvider = logProvider;
 		_iPAddressFilter = iPAddressFilter;
 	}
 
-    public async Task<Dictionary<IPAddress, int>> GetNumberRequestPerIpAddress( 
-		DateTime timeStart, 
+	public async Task<Dictionary<IPAddress, int>> GetNumberRequestPerIpAddress(
+		DateTime timeStart,
 		DateTime timeEnd)
 	{
+		if (timeStart > timeEnd)
+		{
+			throw new ArgumentException($"{nameof(timeStart)} can't be later than {nameof(timeEnd)}");
+		}
 
 		var log = await _logProvider.GetLog();
 		var dict = new Dictionary<IPAddress, int>();
 
-		foreach (var (ip, dateTime) in LogHelper.ParseLog(log))
+		foreach (var (ip, dateTime) in LogParser.Parse(log))
 		{
 			if (dateTime < timeStart || dateTime > timeEnd) continue;
 			if (!_iPAddressFilter.IsSatisfies(ip)) continue;

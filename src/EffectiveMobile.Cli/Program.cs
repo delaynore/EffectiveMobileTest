@@ -18,7 +18,7 @@ public static class Program
 		catch (Exception e)
 		{
 			Console.WriteLine(e.Message);
-        }
+		}
 	}
 
 	public async static Task Run(string[] args)
@@ -26,7 +26,7 @@ public static class Program
 		var options = ReadConfiguration(args);
 
 		var analyzer = new AccessLogAnalyzer(
-			new FileLogProvider(options.FileLog), 
+			new FileLogProvider(options.FileLog),
 			new IPAddressFilter(options.AddressStart, options.AddressMask));
 
 		var dict = await analyzer.GetNumberRequestPerIpAddress(
@@ -62,9 +62,9 @@ public static class Program
 		options.FileOutput = fileOutput;
 
 		var addressStart = config.GetValue<string>("address-start");
-		if(addressStart is not null)
+		if (addressStart is not null)
 		{
-			if(!IPAddress.TryParse(addressStart, out var parsedStart))
+			if (!IPAddress.TryParse(addressStart, out var parsedStart))
 			{
 				throw new ArgumentException("address-start is not valid IPv4 address");
 			}
@@ -88,7 +88,7 @@ public static class Program
 
 		var timeStartString = config.GetValue<string>("time-start");
 		ArgumentNullException.ThrowIfNull(timeStartString, "time-start");
-		if(!DateTime.TryParseExact(timeStartString, "dd.MM.yyyy", null, DateTimeStyles.None, out var timeStart))
+		if (!DateTime.TryParseExact(timeStartString, "dd.MM.yyyy", null, DateTimeStyles.None, out var timeStart))
 		{
 			throw new FormatException("time-start is not valid date time format");
 		}
