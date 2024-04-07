@@ -1,0 +1,17 @@
+{
+  "profiles": {
+    "EffectiveMobile.Cli": {
+      "commandName": "Project",
+      "commandLineArgs": "--file-log test_log.txt --file-output new.txt",
+      "workingDirectory": "D:\\develop\\EffectiveMobileTest\\src\\EffectiveMobile.Cli\\bin\\Debug\\net8.0",
+      "environmentVariables": {
+        //"--file-log": "test_log.txt",
+        //"--file-output": "",
+        //"--address-start": "0.0.0.0"
+        //"--address-mask": "0",
+        //"--time-start": "fs",
+        //"--time-end": "fds"
+      }
+    }
+  }
+}
