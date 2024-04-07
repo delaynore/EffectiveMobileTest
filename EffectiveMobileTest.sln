@@ -8,6 +8,11 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{A4778186-7138-4095-90BA-F6B3D3A5A5BB}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "common", "common", "{EF95DF56-96A1-4592-8B3E-335BF8BAE3BD}"
+	ProjectSection(SolutionItems) = preProject
+		.gitattributes = .gitattributes
+		.gitignore = .gitignore
+		README.md = README.md
+	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EffectiveMobile.Cli", "src\EffectiveMobile.Cli\EffectiveMobile.Cli.csproj", "{78642BC0-B9A4-43DE-9440-6797AD55BB11}"
 EndProject
