@@ -20,6 +20,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EffectiveMobile.Infrastruct
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EffectiveMobile.Core", "src\EffectiveMobile.Core\EffectiveMobile.Core.csproj", "{2927980A-293C-4160-92B5-FA8C98527375}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EffectiveMobile.Core.Tests", "tests\EffectiveMobile.Core.Tests\EffectiveMobile.Core.Tests.csproj", "{AD236C1E-2E12-40CB-94D5-6ECBBB493C99}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EffectiveMobile.Infrastructure.Tests", "tests\EffectiveMobile.Infrastructure.Tests\EffectiveMobile.Infrastructure.Tests.csproj", "{B34EE4AF-C725-483A-AE3C-D03AA62969C6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -38,6 +42,14 @@ Global
 		{2927980A-293C-4160-92B5-FA8C98527375}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2927980A-293C-4160-92B5-FA8C98527375}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2927980A-293C-4160-92B5-FA8C98527375}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AD236C1E-2E12-40CB-94D5-6ECBBB493C99}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AD236C1E-2E12-40CB-94D5-6ECBBB493C99}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AD236C1E-2E12-40CB-94D5-6ECBBB493C99}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AD236C1E-2E12-40CB-94D5-6ECBBB493C99}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B34EE4AF-C725-483A-AE3C-D03AA62969C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B34EE4AF-C725-483A-AE3C-D03AA62969C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B34EE4AF-C725-483A-AE3C-D03AA62969C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B34EE4AF-C725-483A-AE3C-D03AA62969C6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -46,6 +58,8 @@ Global
 		{78642BC0-B9A4-43DE-9440-6797AD55BB11} = {35956A50-359C-4286-8CC4-62F8B4672E2C}
 		{F9653A19-16E5-4F1B-A3A8-5F31CBC9E9E0} = {35956A50-359C-4286-8CC4-62F8B4672E2C}
 		{2927980A-293C-4160-92B5-FA8C98527375} = {35956A50-359C-4286-8CC4-62F8B4672E2C}
+		{AD236C1E-2E12-40CB-94D5-6ECBBB493C99} = {A4778186-7138-4095-90BA-F6B3D3A5A5BB}
+		{B34EE4AF-C725-483A-AE3C-D03AA62969C6} = {A4778186-7138-4095-90BA-F6B3D3A5A5BB}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2DDAD71D-43DE-48FC-A2D5-DB529BE92AED}

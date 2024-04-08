@@ -100,7 +100,7 @@ public static class Program
 		{
 			throw new FormatException("time-end is not valid date time format");
 		}
-		options.TimeEnd = timeEnd.AddDays(1);
+		options.TimeEnd = timeEnd;
 
 		return options;
 	}

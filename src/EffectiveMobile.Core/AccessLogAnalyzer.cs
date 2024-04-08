@@ -23,6 +23,12 @@ public class AccessLogAnalyzer
 		DateTime timeStart,
 		DateTime timeEnd)
 	{
+		if (timeEnd != DateTime.MaxValue 
+			&& timeEnd <= DateTime.MaxValue.AddDays(-1).AddTicks(1)) 
+		{
+			timeEnd = timeEnd.AddDays(1).AddTicks(-1);
+		}
+
 		if (timeStart > timeEnd)
 		{
 			throw new ArgumentException($"{nameof(timeStart)} can't be later than {nameof(timeEnd)}");
